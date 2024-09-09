@@ -11,19 +11,7 @@
 namespace MergeSortedArray
 {
 using namespace std;
-void merge2(vector<int>& nums1, int m, vector<int>& nums2, int n)
-{
-    for (size_t i = 0; i < nums2.size(); i++)
-    {
-        nums1[m++] = nums2[i];
-    }
-    sort(nums1.begin(), nums1.end());
-}
-void merge1(vector<int>& nums1, int m, vector<int>& nums2, int n)
-{
-    for_each(nums2.begin(), nums2.end(), [&](int x) { nums1[m++] = x; });
-    sort(nums1.begin(), nums1.end());
-}
+
 void merge(vector<int>& nums1, int m, vector<int>& nums2, int n)
 {
     std::cout << "nums1\t";
