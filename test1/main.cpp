@@ -215,7 +215,7 @@ struct tests
 
 int main()
 {
-    tests t("BuildingsWithAnOceanView FindParenthesis MoveZeroes TopKElements");
+    tests t("BuildingsWithAnOceanView FindParenthesis MoveZeroes TopKElements MergeSortedArray RangeSumOfBST ReverseLinkedList LenghtOfLastWord ValidAnagram PalindromeNumber ValidWordAbbreviation ValidPalindromeII ValidPalindrome MinRemoveValidParenthesis BinarySearch LowestCommonAncestorBinaryTreeIII DotProductTwoSparseVector RandomPickwithWeight BasicCalculatorII BinaryTreeVerticalOrderTransversal Toeplitz MinRemoveValidParenthesis BinaryTreeVerticalOrderTransversal NestedListWeightSum MinWindowSubstring QuestionMarks Auros FindParenthesis MoveZeroes");
 #pragma region Tests
     if (t.contains("FindParenthesis"))
     {
