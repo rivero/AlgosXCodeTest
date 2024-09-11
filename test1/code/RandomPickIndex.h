@@ -83,53 +83,60 @@ In summary, this algorithm provides a simple way to randomly select an index whe
 */
 namespace RandomPickIndex
 {
-	class Solution
-	{
-		const vector<int>& nums;
-	public:
-		Solution(vector<int>& nums) : nums{ nums }
-		{
-		}
-
-		int pick(int target)
-		{
-			int ind = rand() % nums.size();
-			if (nums[ind] == target) return ind;
-			else return pick(target);
-		}
-	};
-
+    class Solution 
+    {
+        const std::vector<int>& m_nums;
+        std::mt19937 gen; // Mersenne Twister random number generator
+        
+    public:
+        Solution(const std::vector<int>& nums) : m_nums(nums), gen(std::random_device{}()) {}
+        
+        int pick(int target) 
+        {
+            int count = 0;
+            int result = -1;
+            for (int i = 0; i < m_nums.size(); ++i) 
+            {
+                if (m_nums[i] == target) 
+                {
+                    if (std::uniform_int_distribution<>(0, count)(gen) == 0) 
+                    {
+                        result = i;
+                    }
+                    ++count;
+                }
+            }
+            return result;
+        }
+    };
 
 	/*
 
-	BAD solution
-		class Solution
-	{
-		vector<int> m_nums;
-	public:
-		Solution(vector<int> nums)
-		{
-			m_nums = nums;
-		}
+     #include <vector>
+     #include <random>
+     
+     class Solution {
+     std::vector<int> m_nums;
+     std::mt19937 gen; // Mersenne Twister random number generator
+     
+     public:
+     Solution(std::vector<int> nums) : m_nums(nums), gen(std::random_device{}()) {}
+     
+     int pick(int target) {
+     int count = 0;
+     int result = -1;
+     for (int i = 0; i < m_nums.size(); ++i) {
+     if (m_nums[i] == target) {
+     if (std::uniform_int_distribution<>(0, count)(gen) == 0) {
+     result = i;
+     }
+     ++count;
+     }
+     }
+     return result;
+     }
+     };
 
-		int pick(int target)
-		{
-			int count = 0; // Number of occurrences of target
-			int result = -1; // Index to return
-			for (int i = 0; i < m_nums.size(); ++i)
-			{
-				if (m_nums[i] == target)
-				{
-					// Randomly select an index with equal probability
-					if (rand() % (++count) == 0)
-					{
-						result = i;
-					}
-				}
-			}
-			return result;
-		}
-	};
 
 
 	*/
