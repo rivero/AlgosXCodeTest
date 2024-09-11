@@ -87,7 +87,7 @@ namespace RandomPickIndex
 	{
 		const vector<int>& nums;
 	public:
-		Solution(vector<int> nums) : nums{ nums }
+		Solution(vector<int>& nums) : nums{ nums }
 		{
 		}
 
@@ -141,7 +141,8 @@ namespace RandomPickIndex
 
 	void process()
 	{
-        Solution sol({ 1, 2, 3, 3, 3});
+        vector<int> vec = { 1, 2, 3, 3, 3};
+        Solution sol(vec);
 
 		cout << sol.pick(3) << "\n";
 		cout << sol.pick(1) << "\n";

@@ -215,7 +215,7 @@ struct tests
 
 int main()
 {
-    tests t("BuildingsWithAnOceanView FindParenthesis MoveZeroes TopKElements MergeSortedArray RangeSumOfBST ReverseLinkedList LenghtOfLastWord ValidAnagram PalindromeNumber ValidWordAbbreviation ValidPalindromeII ValidPalindrome MinRemoveValidParenthesis BinarySearch LowestCommonAncestorBinaryTreeIII DotProductTwoSparseVector RandomPickwithWeight BasicCalculatorII BinaryTreeVerticalOrderTransversal Toeplitz MinRemoveValidParenthesis BinaryTreeVerticalOrderTransversal NestedListWeightSum MinWindowSubstring QuestionMarks Auros FindParenthesis MoveZeroes");
+    tests t("BuildingsWithAnOceanView FindParenthesis MoveZeroes TopKElements MergeSortedArray RangeSumOfBST ReverseLinkedList LenghtOfLastWord ValidAnagram PalindromeNumber ValidWordAbbreviation ValidPalindromeII ValidPalindrome MinRemoveValidParenthesis BinarySearch LowestCommonAncestorBinaryTreeIII DotProductTwoSparseVector RandomPickwithWeight BasicCalculatorII BinaryTreeVerticalOrderTransversal Toeplitz MinRemoveValidParenthesis BinaryTreeVerticalOrderTransversal NestedListWeightSum MinWindowSubstring QuestionMarks Auros FindParenthesis MoveZeroes SimplePath ConvertBSTtoDoubleLinkedList NumberOfIslands MinimumAddParenthesisValid LowestCommonAncestorBinaryTreeI RecursiveRabbitInterview LongestIncreasingSubsequenceNLogN IncreasingTripleSequence MinimumAdjacentSwapsToMakleValidArray AnalyzeUserWebsiteVisit SumRootToLeaf CustomSortString InsertSortedCircularList IntervalListIntersections KClosestPointsToTheOrigin pow GroupShiftedStrings MakingALargeIsland ValidNumber ShortestPathBinaryMatrix IslandPerimeter AllNodesInDistanceKInBinaryTree CopyListwWithRandomPointer CloneGraph SubarraySumEqualsK FindPeakElement BinaryTreeRightSideView ClosesetBinarySearchTreeValue NumberOfClosedIslands LenghtOfLongestValidsubstring MinimumNumberOfKeyPresses PlatesBetweenCandles LRUCache ReorganizeString LowestCommonAncestorBinaryTreeII MaximumSwap DiagonalTraverse RandomPickIndex MergeIntervals TopKFrequentElements NextPermutation FourSum ThreeSum TwoSum RotateImage LetterCombinationOfAPhoneNumber BinaryTreeLevelOrderTransversal FindKClosestElements MaxConsecutiveOnesIII FindMaxLenValidSubsequenceII Permutations SubSets SubsetsII FindMinimumInRotatedSortedArray SearchInRotatedSortedArray InsertInterval ContiguousArray AccountsMerge FindFirstAndLastPositionOfelementInSortedArray ValidParenthesis PeekingIterator WordSearch");
 #pragma region Tests
     if (t.contains("FindParenthesis"))
     {
@@ -225,7 +225,7 @@ int main()
     {
         MoveZeroes::process();
     }
-    if (false)
+    if (true)
     {
         Solution sol;
 
@@ -243,12 +243,12 @@ int main()
     {
         cout << RangeSumOfBST::process();
     }
-    if (false)
+    if (true)
     {
         vector<string> v1{ "ab", "c" }, v2{ "a", "bc" };
         cout << (arraystringsequal::arrayStringsAreEqual(v1, v2) ? " True" : "false");
     }
-    if (false)
+    if (true)
     {
         timeit t;
         vector<int> v1{ 4,3,2,3,1 }, v2{ 2,2,5,2,3,6 };
@@ -259,7 +259,7 @@ int main()
     {
         ReverseLinkedList::process();
     }
-    if (false)
+    if (true)
     {
         LenghtOfLastWord l;
         auto val = l.lengthOfLastWord("   fly me   to   the moon  ");
@@ -272,7 +272,7 @@ int main()
         assert(val == 6);
         cout << val << "\n";
     }
-    if (false)
+    if (true)
     {
         ValidAnagram v;
         auto val = v.isAnagram("anagram","nagaram");
@@ -280,7 +280,7 @@ int main()
         val = v.isAnagram("rat", "car");
         assert(!val);
     }
-    if (false)
+    if (true)
     {
         PalindromeNumber p;
         auto val = p.isPalindrome(121);
@@ -303,7 +303,7 @@ int main()
     }
     if (t.contains("ValidPalindrome"))
         ValidPalindrome::process();
-    if (false)
+    if (true)
     {
         MovingAverage movingAverage(3);
         cout << fixed << setprecision(12) <<movingAverage.next(1) << "\n"; // return 1.0 = 1 / 1
@@ -332,13 +332,13 @@ int main()
     {
         NestedListWeightSum::process();
     }
-    if (false)
+    if (true)
     {
         minWindowSubstring::process();
     }
-    if (false)
+    if (true)
         Auros::test();
-    if (false)
+    if (true)
     {
         vector<int> vec{ 1, 2, 3, 4, 2 };
         cout << "\n\nChallenge:\n";
